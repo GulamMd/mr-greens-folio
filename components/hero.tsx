@@ -50,7 +50,7 @@ const Hero = () => {
         >
           <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-primary">
             <Image
-              src="/placeholder.svg?height=320&width=320"
+              src="/images/MyProfile.jpg"
               alt="Gulam Mohammad"
               layout="fill"
               objectFit="cover"

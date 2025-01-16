@@ -4,6 +4,7 @@ import { useState } from 'react'
 import Link from 'next/link'
 import { MoonIcon, SunIcon } from 'lucide-react'
 import { useTheme } from 'next-themes'
+import { motion } from 'framer-motion'
 
 const Header = () => {
   const [isOpen, setIsOpen] = useState(false)
@@ -15,25 +16,46 @@ const Header = () => {
         <div className="flex items-center justify-between h-16">
           <div className="flex items-center">
             <Link href="/" className="text-2xl font-bold text-primary">
-              GM
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 24 24"
+                fill="none"
+                stroke="currentColor"
+                strokeWidth="2"
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                className="w-8 h-8"
+              >
+                <path d="M3 9l9-7 9 7v11a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2z" />
+                <polyline points="9 22 9 12 15 12 15 22" />
+              </svg>
             </Link>
           </div>
-          <nav className="hidden md:block">
+          <motion.nav
+            initial={{ opacity: 0, y: -20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5 }}
+            className="hidden md:block"
+          >
             <ul className="flex space-x-4">
-              <li><Link href="#about" className="text-foreground hover:text-primary transition-colors">About</Link></li>
-              <li><Link href="#portfolio" className="text-foreground hover:text-primary transition-colors">Portfolio</Link></li>
-              <li><Link href="#blog" className="text-foreground hover:text-primary transition-colors">Blog</Link></li>
-              <li><Link href="#skills" className="text-foreground hover:text-primary transition-colors">Skills</Link></li>
-              <li><Link href="#contact" className="text-foreground hover:text-primary transition-colors">Contact</Link></li>
+              {['About', 'Portfolio', 'Blog', 'Skills', 'Contact'].map((item) => (
+                <motion.li key={item} whileHover={{ scale: 1.1 }} whileTap={{ scale: 0.95 }}>
+                  <Link href={`#${item.toLowerCase()}`} className="text-foreground hover:text-primary transition-colors">
+                    {item}
+                  </Link>
+                </motion.li>
+              ))}
             </ul>
-          </nav>
+          </motion.nav>
           <div className="flex items-center">
-            <button
+            <motion.button
               onClick={() => setTheme(theme === 'dark' ? 'light' : 'dark')}
               className="p-2 rounded-full bg-primary/10 text-primary hover:bg-primary/20 transition-colors"
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.95 }}
             >
               {theme === 'dark' ? <SunIcon className="h-5 w-5" /> : <MoonIcon className="h-5 w-5" />}
-            </button>
+            </motion.button>
             <button
               onClick={() => setIsOpen(!isOpen)}
               className="ml-4 md:hidden"

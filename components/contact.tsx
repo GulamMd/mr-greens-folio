@@ -44,19 +44,19 @@ const Contact = () => {
               <div className="space-y-4">
                 <div className="flex items-center">
                   <MailIcon className="h-5 w-5 mr-2 text-primary" />
-                  <a href="mailto:gulam@example.com" className="text-muted-foreground hover:text-primary">
-                    gulam@example.com
+                  <a href="mailto:gulammohammadkhalid@gmail.com" className="text-muted-foreground hover:text-primary">
+                    gulammohammadkhalid@gmail.com
                   </a>
                 </div>
                 <div className="flex items-center">
                   <LinkedinIcon className="h-5 w-5 mr-2 text-primary" />
-                  <a href="https://linkedin.com/in/gulammohammad" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                  <a href="https://linkedin.com/in/gulammohammadkhalid/" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                     LinkedIn Profile
                   </a>
                 </div>
                 <div className="flex items-center">
                   <GithubIcon className="h-5 w-5 mr-2 text-primary" />
-                  <a href="https://github.com/gulammohammad" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
+                  <a href="https://github.com/GulamMd" target="_blank" rel="noopener noreferrer" className="text-muted-foreground hover:text-primary">
                     GitHub Profile
                   </a>
                 </div>

@@ -76,7 +76,7 @@ const CV = () => {
           transition={{ delay: 0.2, duration: 0.5 }}
         >
           <Button asChild>
-            <a href="/path-to-your-cv.pdf" download>
+            <a href="/cv/Software_Developer_Md_05102024.pdf" download>
               Download CV <DownloadIcon className="ml-2 h-4 w-4" />
             </a>
           </Button>

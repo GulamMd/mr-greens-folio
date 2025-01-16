@@ -4,10 +4,10 @@ import About from '@/components/about'
 import Portfolio from '@/components/portfolio'
 import Blog from '@/components/blog'
 import Skills from '@/components/skills'
-import Testimonials from '@/components/testimonials'
 import Contact from '@/components/contact'
 import Footer from '@/components/footer'
 import CV from '@/components/cv'
+import FeaturedProjects from '@/components/featured-projects'
 
 export default function Home() {
   return (
@@ -19,7 +19,7 @@ export default function Home() {
       <Portfolio />
       <Blog />
       <Skills />
-      <Testimonials />
+      <FeaturedProjects />
       <Contact />
       <Footer />
     </main>
